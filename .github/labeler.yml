@@ -1,0 +1,10 @@
+bug:
+  - head-branch: ["fix/*", "bug/*", "hotfix/*"]
+enhancement:
+  - head-branch: ["feat/*", "feature/*"]
+documentation:
+  - changed-files:
+    - any-glob-to-any-file: ["**/*.md", "docs/**"]
+tests:
+  - changed-files:
+    - any-glob-to-any-file: ["tests/**", "**/*test*"]

@@ -262,7 +262,6 @@ def render_table(
     lines: list[str] = []
 
     # ── Top border ──
-    top_segments = [Box.H * w for w in col_widths]
     top_line = Box.TL + (Box.H * inner_width) + Box.TR
     lines.append(pad + dim(top_line))
 

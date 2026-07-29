@@ -2,9 +2,6 @@
 
 from __future__ import annotations
 
-import math
-from typing import Optional
-
 
 def american_to_decimal(american: int) -> float:
     """Convert American odds to decimal odds.

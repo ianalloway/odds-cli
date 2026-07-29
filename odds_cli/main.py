@@ -36,8 +36,6 @@ from odds_cli.display import (
     red,
     yellow,
     cyan,
-    blue,
-    magenta,
     white_bold,
     color_odds,
     color_pnl,

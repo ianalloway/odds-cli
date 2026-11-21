@@ -178,32 +178,110 @@ SAMPLE_DATA: dict[str, list[dict[str, Any]]] = {
 }
 
 SAMPLE_HISTORY = [
-    {"date": "2026-01-10", "sport": "nba", "matchup": "LAL vs GSW", "side": "LAL", "odds": 170, "stake": 100, "result": "win"},
-    {"date": "2026-01-10", "sport": "nba", "matchup": "BOS vs MIL", "side": "BOS", "odds": -130, "stake": 130, "result": "win"},
-    {"date": "2026-01-11", "sport": "nfl", "matchup": "KC vs BUF", "side": "KC", "odds": 145, "stake": 100, "result": "loss"},
-    {"date": "2026-01-12", "sport": "nba", "matchup": "DEN vs PHX", "side": "DEN", "odds": -120, "stake": 120, "result": "win"},
-    {"date": "2026-01-13", "sport": "nba", "matchup": "DAL vs MIN", "side": "DAL", "odds": 140, "stake": 100, "result": "loss"},
-    {"date": "2026-01-14", "sport": "nfl", "matchup": "PHI vs DAL", "side": "PHI", "odds": -220, "stake": 220, "result": "win"},
-    {"date": "2026-01-15", "sport": "nba", "matchup": "MIA vs NYK", "side": "NYK", "odds": -290, "stake": 290, "result": "win"},
-    {"date": "2026-01-15", "sport": "nba", "matchup": "LAL vs GSW", "side": "GSW", "odds": -200, "stake": 200, "result": "win"},
-    {"date": "2026-01-16", "sport": "nba", "matchup": "BOS vs MIL", "side": "MIL", "odds": 110, "stake": 100, "result": "loss"},
-    {"date": "2026-01-17", "sport": "nba", "matchup": "DEN vs PHX", "side": "PHX", "odds": 100, "stake": 100, "result": "loss"},
-    {"date": "2026-01-18", "sport": "nfl", "matchup": "SF vs SEA", "side": "SF", "odds": -115, "stake": 115, "result": "win"},
-    {"date": "2026-01-19", "sport": "nba", "matchup": "LAL vs GSW", "side": "LAL", "odds": 175, "stake": 100, "result": "win"},
-    {"date": "2026-01-20", "sport": "nba", "matchup": "DAL vs MIN", "side": "MIN", "odds": -165, "stake": 165, "result": "win"},
-    {"date": "2026-01-21", "sport": "nba", "matchup": "MIA vs NYK", "side": "MIA", "odds": 240, "stake": 100, "result": "loss"},
-    {"date": "2026-01-22", "sport": "nba", "matchup": "BOS vs MIL", "side": "BOS", "odds": -125, "stake": 125, "result": "win"},
-    {"date": "2026-01-23", "sport": "nfl", "matchup": "KC vs BUF", "side": "BUF", "odds": -170, "stake": 170, "result": "win"},
-    {"date": "2026-01-24", "sport": "nba", "matchup": "DEN vs PHX", "side": "DEN", "odds": -118, "stake": 118, "result": "loss"},
-    {"date": "2026-01-25", "sport": "nba", "matchup": "LAL vs GSW", "side": "GSW", "odds": -195, "stake": 195, "result": "win"},
-    {"date": "2026-02-01", "sport": "nba", "matchup": "DAL vs MIN", "side": "DAL", "odds": 138, "stake": 100, "result": "win"},
-    {"date": "2026-02-02", "sport": "nba", "matchup": "MIA vs NYK", "side": "NYK", "odds": -280, "stake": 280, "result": "loss"},
-    {"date": "2026-02-03", "sport": "nba", "matchup": "BOS vs MIL", "side": "BOS", "odds": -130, "stake": 130, "result": "win"},
-    {"date": "2026-02-04", "sport": "nfl", "matchup": "PHI vs DAL", "side": "PHI", "odds": -215, "stake": 215, "result": "win"},
-    {"date": "2026-02-05", "sport": "nba", "matchup": "DEN vs PHX", "side": "PHX", "odds": 105, "stake": 100, "result": "win"},
-    {"date": "2026-02-06", "sport": "nba", "matchup": "LAL vs GSW", "side": "LAL", "odds": 165, "stake": 100, "result": "loss"},
-    {"date": "2026-02-07", "sport": "nba", "matchup": "DAL vs MIN", "side": "MIN", "odds": -162, "stake": 162, "result": "win"},
-    {"date": "2026-02-08", "sport": "nba", "matchup": "MIA vs NYK", "side": "NYK", "odds": -285, "stake": 285, "result": "win"},
+    {
+        "date": "2026-01-10", "sport": "nba", "matchup": "LAL vs GSW",
+        "side": "LAL", "odds": 170, "stake": 100, "result": "win",
+    },
+    {
+        "date": "2026-01-10", "sport": "nba", "matchup": "BOS vs MIL",
+        "side": "BOS", "odds": -130, "stake": 130, "result": "win",
+    },
+    {
+        "date": "2026-01-11", "sport": "nfl", "matchup": "KC vs BUF",
+        "side": "KC", "odds": 145, "stake": 100, "result": "loss",
+    },
+    {
+        "date": "2026-01-12", "sport": "nba", "matchup": "DEN vs PHX",
+        "side": "DEN", "odds": -120, "stake": 120, "result": "win",
+    },
+    {
+        "date": "2026-01-13", "sport": "nba", "matchup": "DAL vs MIN",
+        "side": "DAL", "odds": 140, "stake": 100, "result": "loss",
+    },
+    {
+        "date": "2026-01-14", "sport": "nfl", "matchup": "PHI vs DAL",
+        "side": "PHI", "odds": -220, "stake": 220, "result": "win",
+    },
+    {
+        "date": "2026-01-15", "sport": "nba", "matchup": "MIA vs NYK",
+        "side": "NYK", "odds": -290, "stake": 290, "result": "win",
+    },
+    {
+        "date": "2026-01-15", "sport": "nba", "matchup": "LAL vs GSW",
+        "side": "GSW", "odds": -200, "stake": 200, "result": "win",
+    },
+    {
+        "date": "2026-01-16", "sport": "nba", "matchup": "BOS vs MIL",
+        "side": "MIL", "odds": 110, "stake": 100, "result": "loss",
+    },
+    {
+        "date": "2026-01-17", "sport": "nba", "matchup": "DEN vs PHX",
+        "side": "PHX", "odds": 100, "stake": 100, "result": "loss",
+    },
+    {
+        "date": "2026-01-18", "sport": "nfl", "matchup": "SF vs SEA",
+        "side": "SF", "odds": -115, "stake": 115, "result": "win",
+    },
+    {
+        "date": "2026-01-19", "sport": "nba", "matchup": "LAL vs GSW",
+        "side": "LAL", "odds": 175, "stake": 100, "result": "win",
+    },
+    {
+        "date": "2026-01-20", "sport": "nba", "matchup": "DAL vs MIN",
+        "side": "MIN", "odds": -165, "stake": 165, "result": "win",
+    },
+    {
+        "date": "2026-01-21", "sport": "nba", "matchup": "MIA vs NYK",
+        "side": "MIA", "odds": 240, "stake": 100, "result": "loss",
+    },
+    {
+        "date": "2026-01-22", "sport": "nba", "matchup": "BOS vs MIL",
+        "side": "BOS", "odds": -125, "stake": 125, "result": "win",
+    },
+    {
+        "date": "2026-01-23", "sport": "nfl", "matchup": "KC vs BUF",
+        "side": "BUF", "odds": -170, "stake": 170, "result": "win",
+    },
+    {
+        "date": "2026-01-24", "sport": "nba", "matchup": "DEN vs PHX",
+        "side": "DEN", "odds": -118, "stake": 118, "result": "loss",
+    },
+    {
+        "date": "2026-01-25", "sport": "nba", "matchup": "LAL vs GSW",
+        "side": "GSW", "odds": -195, "stake": 195, "result": "win",
+    },
+    {
+        "date": "2026-02-01", "sport": "nba", "matchup": "DAL vs MIN",
+        "side": "DAL", "odds": 138, "stake": 100, "result": "win",
+    },
+    {
+        "date": "2026-02-02", "sport": "nba", "matchup": "MIA vs NYK",
+        "side": "NYK", "odds": -280, "stake": 280, "result": "loss",
+    },
+    {
+        "date": "2026-02-03", "sport": "nba", "matchup": "BOS vs MIL",
+        "side": "BOS", "odds": -130, "stake": 130, "result": "win",
+    },
+    {
+        "date": "2026-02-04", "sport": "nfl", "matchup": "PHI vs DAL",
+        "side": "PHI", "odds": -215, "stake": 215, "result": "win",
+    },
+    {
+        "date": "2026-02-05", "sport": "nba", "matchup": "DEN vs PHX",
+        "side": "PHX", "odds": 105, "stake": 100, "result": "win",
+    },
+    {
+        "date": "2026-02-06", "sport": "nba", "matchup": "LAL vs GSW",
+        "side": "LAL", "odds": 165, "stake": 100, "result": "loss",
+    },
+    {
+        "date": "2026-02-07", "sport": "nba", "matchup": "DAL vs MIN",
+        "side": "MIN", "odds": -162, "stake": 162, "result": "win",
+    },
+    {
+        "date": "2026-02-08", "sport": "nba", "matchup": "MIA vs NYK",
+        "side": "NYK", "odds": -285, "stake": 285, "result": "win",
+    },
 ]
 
 
@@ -223,7 +301,8 @@ def get_api_key() -> Optional[str]:
         try:
             with open(CONFIG_FILE) as f:
                 config = json.load(f)
-            return config.get("api_key")
+            configured_key = config.get("api_key") if isinstance(config, dict) else None
+            return configured_key if isinstance(configured_key, str) else None
         except (json.JSONDecodeError, KeyError):
             pass
     return None
@@ -253,7 +332,7 @@ def _fetch_live_data(sport: str, api_key: str) -> list[dict[str, Any]]:
         import requests
     except ImportError:
         print(f"\n  {red('Error:')} 'requests' library required for live data.")
-        print(f"  Install with: pip install requests\n")
+        print("  Install with: pip install requests\n")
         sys.exit(1)
 
     sport_keys = {
@@ -283,7 +362,7 @@ def _fetch_live_data(sport: str, api_key: str) -> list[dict[str, Any]]:
         data = resp.json()
     except requests.RequestException as e:
         print(f"\n  {red('Error:')} Failed to fetch live data: {e}")
-        print(f"  Falling back to sample data.\n")
+        print("  Falling back to sample data.\n")
         return SAMPLE_DATA.get(sport_lower, [])
 
     # Parse API response into our internal format
@@ -493,7 +572,11 @@ def cmd_best_line(sport: str, args: argparse.Namespace) -> None:
 
     print()
     print(render_table(title, headers, rows, alignments))
-    print(render_footer([f"{len(games)} games", f"{len(all_books)} books compared", f"{star_marker()} = best available"]))
+    print(render_footer([
+        f"{len(games)} games",
+        f"{len(all_books)} books compared",
+        f"{star_marker()} = best available",
+    ]))
 
 
 def cmd_kelly(sport: str, prob: float, args: argparse.Namespace) -> None:
@@ -642,7 +725,8 @@ def cmd_convert(american_str: str, args: argparse.Namespace) -> None:
         f"{bold('Implied:')}     {yellow(f'{implied*100:.1f}%')}",
         f"{bold('Fractional:')}  {dim(_to_fractional(decimal_odds))}",
         "",
-        f"{bold('$100 stake:')}  Win {green(f'${100 * (decimal_odds - 1):.2f}')} / Return {cyan(f'${100 * decimal_odds:.2f}')}",
+        f"{bold('$100 stake:')}  Win {green(f'${100 * (decimal_odds - 1):.2f}')} / "
+        f"Return {cyan(f'${100 * decimal_odds:.2f}')}",
     ]
 
     print()

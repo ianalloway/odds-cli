@@ -345,3 +345,17 @@ class TestFindBestLineEdgeCases:
         book, odds = find_best_line(books, side="lay")
         assert book == "FD"
         assert odds == -175
+
+@pytest.mark.parametrize("config, expected", [
+    ('{"api_key": "demo"}', "demo"),
+    ('{"api_key": 42}', None),
+    ('[]', None),
+])
+def test_config_api_key_requires_a_string(tmp_path, monkeypatch, config, expected):
+    from odds_cli import main
+
+    path = tmp_path / "config.json"
+    path.write_text(config)
+    monkeypatch.delenv("ODDS_API_KEY", raising=False)
+    monkeypatch.setattr(main, "CONFIG_FILE", path)
+    assert main.get_api_key() == expected

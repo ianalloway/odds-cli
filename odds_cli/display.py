@@ -137,7 +137,7 @@ def color_pnl(value: float) -> str:
     elif value < 0:
         return red(f"-${abs(value):,.2f}")
     else:
-        return dim(f"$0.00")
+        return dim("$0.00")
 
 
 # ─── Box Drawing Characters ───────────────────────────────────────────────────
